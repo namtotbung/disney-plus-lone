@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, memo } from "react"
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2"
 import api from "../services/global_api"
 import MovieCard from "./MovieCard"
 
-const MovieList = ({ genreId }) => {
+const MovieGenre = ({ genreId }) => {
+    console.log(genreId, "render");
     const [movies, setMovies] = useState([])
     const ref = useRef()
     const SCREEN_WIDTH = window.innerWidth
@@ -37,4 +38,4 @@ const MovieList = ({ genreId }) => {
     )
 }
 
-export default MovieList
+export default memo(MovieGenre)

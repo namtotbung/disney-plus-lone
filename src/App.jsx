@@ -6,7 +6,7 @@ import MovieLibrary from "./components/MovieLibrary";
 
 const App = () => {
   return (
-    <div className="text-white bg-black">
+    <div className="relative min-h-screen text-white bg-black">
       <Header/>
       <Slider/>
       <ProductionHouse/>
