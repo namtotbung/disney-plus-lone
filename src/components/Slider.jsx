@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2"
 import api from "../services/global_api"
-
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
+import apiConstants from "../constants/api"
 const SCREEN_WIDTH = window.innerWidth
 
 const Slider = () => {
@@ -32,7 +31,7 @@ const Slider = () => {
                     <img
                         className="min-w-full h-[500px] object-cover object-top rounded-sm select-none transition-all hover:border-4 border-gray-100"
                         key={index}
-                        src={IMAGE_BASE_URL + movie.backdrop_path}
+                        src={apiConstants.TMDB_IMAGE_BASE_URL + movie.backdrop_path}
                         alt="Backdrop Image"
                     />
                 ))}

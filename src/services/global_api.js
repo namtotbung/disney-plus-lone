@@ -1,9 +1,10 @@
 import axios from "axios";
+import apiConstants from "../constants/api"
 
-const movieBaseUrl = "https://api.themoviedb.org/3"
-const apiKey = "b90fdd4253f996d129cfe6f42209a660"
-const getTrendingMovies = axios.get(movieBaseUrl + "/trending/all/day?api_key=" + apiKey)
+const getTrendingMovies = axios.get(apiConstants.TMDB_BASE_URL + "/trending/all/day?api_key=" + apiConstants.TMDB_API_KEY)
+const getMoviesByGenreId = (genreId) => axios.get(apiConstants.TMDB_BASE_URL + "/discover/movie?api_key=" + apiConstants.TMDB_API_KEY + "&with_genres=" + genreId)
 
 export default {
-    getTrendingMovies
+    getTrendingMovies,
+    getMoviesByGenreId
 }

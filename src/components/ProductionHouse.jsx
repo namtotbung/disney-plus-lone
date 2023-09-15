@@ -39,9 +39,9 @@ const ProductionHouse = () => {
     ]
 
     return (
-        <div className="px-16 py-2 flex gap-2 md:gap-5">
+        <div className="px-16 py-4 flex gap-2 md:gap-5">
             {productions.map((production) => (
-                <div key={production.id} className="relative rounded-lg border-2 border-gray-600 transition-all hover:scale-105 hover:border-4 hover:border-gray-100 overflow-hidden shadow-xl shadow-black cursor-pointer">
+                <div key={production.id} className="relative rounded-lg border-2 border-gray-600 transition-all hover:scale-105 hover:border-gray-100 overflow-hidden shadow-xl shadow-black cursor-pointer">
                     <video className="absolute scale-105 top-0 left-0 w-full transition-all opacity-0 hover:opacity-50" src={production.video} autoPlay muted loop playsInline/>
                     <img className="w-full" src={production.image} alt="Production Image" />
                 </div>
