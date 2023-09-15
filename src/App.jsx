@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Slider
  from "./components/Slider";
 import ProductionHouse from "./components/ProductionHouse";
+import MovieLibrary from "./components/MovieLibrary";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Header/>
       <Slider/>
       <ProductionHouse/>
+      <MovieLibrary/>
     </div>
   )
 }
